@@ -12,6 +12,7 @@
     <div class="loginform">
         <div class="hola"><p>Examenes</p></div>
         <p><a href="{% url 'post_new' %}"><button>Agregar</button></a></p>
+        <a href="{% url 'post_edit_pacient' pk=Pacientes.pk %}"> <button>editar</button> </a>
         <div class="que">
         <br>
         Paciente: {{Pacientes.rut}}

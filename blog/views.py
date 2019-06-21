@@ -65,7 +65,6 @@ def post_edit_pacient(request, pk):
         form = PacienteForm(request.POST, instance=Pacientes)
         if form.is_valid():
             Pacientes = form.save(commit=False)
-            Pacientes.author = request.user
             Pacientes.save()
             return redirect('post_detail_pacient', pk=Pacientes.pk)
     else:
